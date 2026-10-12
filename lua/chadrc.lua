@@ -46,7 +46,6 @@ M.base46 = {
 }
 
 -- M.lsp = {
-	
 -- }
 
 M.nvdash = { load_on_startup = true }
