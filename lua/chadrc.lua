@@ -13,8 +13,10 @@ M.base46 = {
 	},
 
 	hl_override = {
-		Comment = { italic = true },
-		["@comment"] = { italic = true },
+        CursorLine                = { bg = "grey" },
+
+		Comment                   = { fg = "yellow", italic = true },
+		["@comment"]              = { fg = "yellow", italic = true },
 
 		-- Basic types, classes, and structs
 		["@lsp.type.type"]        = { link = "Structure" },
@@ -28,16 +30,16 @@ M.base46 = {
 		["@lsp.type.method"]      = { link = "Function" },
 
 		-- Variables, parameters, and properties
-		["@lsp.type.variable"]    = { link = "@variable" },
+		["@lsp.type.variable"]    = { link = "@variable"  },
 		["@lsp.type.parameter"]   = { link = "Identifier" },
-		["@lsp.type.property"]    = { link = "@property" },
+		["@lsp.type.property"]    = { link = "@property"  },
 
 		-- Namespaces and modules
 		["@lsp.type.namespace"]   = { link = "Include" },
 
 		-- Macros and prebuilts
 		["@lsp.type.macro"]       = { link = "Macro" },
-		["@lsp.type.builtinType"] = { link = "Type" },
+		["@lsp.type.builtinType"] = { link = "Type"  },
 
 		-- Specialized modifiers (e.g., read-only/constant variables)
 		["@lsp.typemod.variable.readonly"] = { link = "Constant" },

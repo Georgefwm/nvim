@@ -20,10 +20,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- map('n', 'gd',         vim.lsp.buf.definition,     { buffer = ev.buf, desc = "Go to definition"     })  -- Default in NVChad
         -- map('n', 'gD',         vim.lsp.buf.declaration,    { buffer = ev.buf, desc = "Go to declaration"    })  -- Default in NVChad
         -- map('n', 'gi',         vim.lsp.buf.implementation, { buffer = ev.buf, desc = "Go to implementation" })
-        -- map('n', 'gr',         vim.lsp.buf.references,     { buffer = ev.buf, desc = "Find references"      })
-        map("n", "K",          vim.lsp.buf.hover,       { buffer = ev.buf, desc = "Hover documentation" })
-        map("n", "<leader>rn", vim.lsp.buf.rename,      { buffer = ev.buf, desc = "Smart rename" })
-        map("n", "<leader>la", vim.lsp.buf.code_action, { buffer = ev.buf, desc = "LSP code action" })
+        map('n', 'gr',         vim.lsp.buf.references,     { buffer = ev.buf, desc = "Find references"      })
+        map("n", "K",          vim.lsp.buf.hover,          { buffer = ev.buf, desc = "Hover documentation"  })
+        map("n", "<leader>rn", vim.lsp.buf.rename,         { buffer = ev.buf, desc = "Smart rename"         })
+        map("n", "<leader>la", vim.lsp.buf.code_action,    { buffer = ev.buf, desc = "LSP code action"      })
+
+
         -- map('n', '[d',         vim.diagnostic.goto_prev,   { buffer = ev.buf, desc = "Previous diagnostic"  })
         -- map('n', ']d',         vim.diagnostic.goto_next,   { buffer = ev.buf, desc = "Next diagnostic" })
 

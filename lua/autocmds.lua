@@ -8,3 +8,23 @@ vim.api.nvim_create_autocmd("BufDelete", {
         end
     end,
 })
+
+vim.api.nvim_create_autocmd("User", {
+    pattern = "LazyLoad",
+    callback = function(event)
+        if event.data == "telescope.nvim" then
+            require("telescope").load_extension("fzf")
+            return true -- Deletes the autocommand automatically
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd("User", {
+    pattern = "LazyLoad",
+    callback = function(event)
+        if event.data == "telescope.nvim" then
+            require("telescope").load_extension("ui-select")
+            return true
+        end
+    end,
+})

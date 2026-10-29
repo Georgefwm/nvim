@@ -12,9 +12,13 @@ del("n", "<leader>e")  -- nvim-tree open/focus(removed)
 -- Add my extra keymaps
 local map = vim.keymap.set
 
-map("n", "<leader>o", "<CMD>Oil <CR>", { desc = "Open oil" })
+map("n", "<leader>e", "<CMD>Oil <CR>", { desc = "Open oil" })
 
-map("n", ";", ":",            { desc = "CMD enter command mode" })
+-- Set yank to yank to clipboard.
+map({'n', 'v'}, 'y', '"+y', { desc = "Yank to system clipboard" })
+map('n',        'Y', '"+Y', { desc = "Yank line to system clipboard" })
+
+map("n", ";", ":",          { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>") -- ??
 
 map("n", "U", "<C-r>", { desc = "Redo change" })
