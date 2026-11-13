@@ -25,7 +25,7 @@ map("n", "U", "<C-r>", { desc = "Redo change" })
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save/Write file" })
 map("n", "<leader>w", "<cmd> w <cr>", { desc = "Save/Write file" })
 
--- Maps Ctrl+Backspace to delete the previous word in insert mode
-map("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
+-- Maps Ctrl+Backspace to delete the previous word in insert mode, even when cursor in middle of word.
+map("i", "<C-BS>", "<C-o>w<C-w>", { noremap = true, silent = true })
 -- Fallback for terminals that interpret Ctrl+Backspace as Ctrl+H
-map("i", "<C-h>", "<C-w>", { noremap = true, silent = true })
+map("i", "<C-h>", "<C-o>w<C-w>", { noremap = true, silent = true })
